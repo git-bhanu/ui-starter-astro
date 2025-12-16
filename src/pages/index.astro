@@ -1,0 +1,211 @@
+---
+import "../styles/global.css";
+import { SEO } from "astro-seo";
+import { Font } from 'astro:assets';
+
+const project = {
+  name: "UI Starter with Astro",
+  version: "0.0.1",
+};
+---
+
+<html lang="en">
+	<head>
+    <SEO title="Starter" description="Starter UI project for astro and vue" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+    <Font cssVariable="--font-roboto">
+	</head>
+  <body class="min-h-screen bg-slate-50 text-slate-800 antialiased">
+    <main class="mx-auto max-w-6xl px-4 py-12 space-y-16">
+
+      <!-- Header -->
+      <header class="space-y-2">
+        <h1 class="text-3xl font-bold tracking-tight">
+          {project.name}
+        </h1>
+        <p class="text-slate-600">
+          Version {project.version} · Astro-powered landing page with a modern frontend stack.
+        </p>
+      </header>
+
+      <!-- Core Platform -->
+      <section class="space-y-6">
+        <h2 class="text-xl font-semibold">Core Platform</h2>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="rounded-lg border bg-white p-5">
+            <h3 class="font-semibold">Astro</h3>
+            <p class="mt-1 text-sm text-slate-600">
+              Primary framework for static-first rendering with optional client-side hydration.
+            </p>
+            <p class="mt-2 text-xs text-slate-500">astro ^5.16.3</p>
+          </div>
+
+          <div class="rounded-lg border bg-white p-5">
+            <h3 class="font-semibold">Vite</h3>
+            <p class="mt-1 text-sm text-slate-600">
+              Bundler and dev server powering fast HMR and builds.
+            </p>
+            <p class="mt-2 text-xs text-slate-500">via Astro</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Styling & UI System -->
+      <section class="space-y-6">
+        <h2 class="text-xl font-semibold">Styling & UI System</h2>
+
+        <ul class="grid gap-4 sm:grid-cols-2">
+          <li class="rounded-lg border bg-white p-5">
+            <h3 class="font-semibold">Tailwind CSS v4</h3>
+            <p class="mt-1 text-sm text-slate-600">
+              Utility-first styling with Vite-native integration.
+            </p>
+            <p class="mt-2 text-xs text-slate-500">
+              tailwindcss · @tailwindcss/vite
+            </p>
+          </li>
+
+          <li class="rounded-lg border bg-white p-5">
+            <h3 class="font-semibold">Animation Utilities</h3>
+            <p class="mt-1 text-sm text-slate-600">
+              Standardized animation helpers for UI motion.
+            </p>
+            <p class="mt-2 text-xs text-slate-500">
+              tailwindcss-animate · tw-animate-css
+            </p>
+          </li>
+
+          <li class="rounded-lg border bg-white p-5">
+            <h3 class="font-semibold">Design System Foundations</h3>
+            <p class="mt-1 text-sm text-slate-600">
+              Class composition and variant-driven styling.
+            </p>
+            <p class="mt-2 text-xs text-slate-500">
+              class-variance-authority · clsx · tailwind-merge
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Interactivity Layer -->
+      <section class="space-y-6">
+        <h2 class="text-xl font-semibold">Interactivity Layer</h2>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="rounded-lg border bg-white p-5">
+            <h3 class="font-semibold">Vue 3 (Integrated)</h3>
+            <p class="mt-1 text-sm text-slate-600">
+              Enabled as an optional client-side layer for interactive islands.
+              No Vue components are rendered on this page.
+            </p>
+            <p class="mt-2 text-xs text-slate-500">
+              vue ^3.5.25 · @astrojs/vue
+            </p>
+          </div>
+
+          <div class="rounded-lg border bg-white p-5">
+            <h3 class="font-semibold">Vue Utility Layer</h3>
+            <p class="mt-1 text-sm text-slate-600">
+              Composable utilities for browser APIs and state helpers.
+            </p>
+            <p class="mt-2 text-xs text-slate-500">
+              @vueuse/core
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Forms & Validation -->
+      <section class="space-y-6">
+        <h2 class="text-xl font-semibold">Forms & Validation</h2>
+
+        <ul class="grid gap-4 sm:grid-cols-2">
+          <li class="rounded-lg border bg-white p-5">
+            <h3 class="font-semibold">Schema Validation</h3>
+            <p class="mt-1 text-sm text-slate-600">
+              Strong runtime validation and parsing.
+            </p>
+            <p class="mt-2 text-xs text-slate-500">zod</p>
+          </li>
+
+          <li class="rounded-lg border bg-white p-5">
+            <h3 class="font-semibold">Form State & Rules</h3>
+            <p class="mt-1 text-sm text-slate-600">
+              Declarative validation rules and error handling.
+            </p>
+            <p class="mt-2 text-xs text-slate-500">
+              vee-validate · @vee-validate/zod
+            </p>
+          </li>
+
+          <li class="rounded-lg border bg-white p-5">
+            <h3 class="font-semibold">Field Validation Helpers</h3>
+            <p class="mt-1 text-sm text-slate-600">
+              Email, phone number, and string validation utilities.
+            </p>
+            <p class="mt-2 text-xs text-slate-500">validator</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Data & Content -->
+      <section class="space-y-6">
+        <h2 class="text-xl font-semibold">Data & Content</h2>
+
+        <ul class="grid gap-4 sm:grid-cols-2">
+          <li class="rounded-lg border bg-white p-5">
+            <h3 class="font-semibold">Location Data</h3>
+            <p class="mt-1 text-sm text-slate-600">
+              Country, state, and city datasets using ISO standards.
+            </p>
+            <p class="mt-2 text-xs text-slate-500">
+              country-state-city
+            </p>
+          </li>
+
+          <li class="rounded-lg border bg-white p-5">
+            <h3 class="font-semibold">SEO Management</h3>
+            <p class="mt-1 text-sm text-slate-600">
+              Centralized SEO metadata handling.
+            </p>
+            <p class="mt-2 text-xs text-slate-500">
+              astro-seo
+            </p>
+          </li>
+
+          <li class="rounded-lg border bg-white p-5">
+            <h3 class="font-semibold">Icons & Media</h3>
+            <p class="mt-1 text-sm text-slate-600">
+              SVG icons and interactive carousels.
+            </p>
+            <p class="mt-2 text-xs text-slate-500">
+              astro-icon · lucide-vue-next · swiper
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Scripts -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold">Project Scripts</h2>
+
+        <div class="rounded-lg border bg-white p-4 text-sm font-mono">
+          <div>npm run dev<span class="text-slate-500"> — start development server</span></div>
+          <div>npm run build<span class="text-slate-500"> — production build</span></div>
+          <div>npm run preview<span class="text-slate-500"> — preview build</span></div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="border-t pt-6 text-sm text-slate-500">
+        This overview is generated from the current <code>package.json</code> configuration.
+      </footer>
+
+    </main>
+	</body>
+</html>
+
